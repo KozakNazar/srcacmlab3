@@ -126,6 +126,9 @@ void printResult(char * const title, double * const dArr, unsigned int runTime){
 
 int main() {
 	double * const dArr = (double *)_mm_malloc(6 * sizeof(double), 16);
+	if (!dArr) {
+		return 0;
+	}	
 
 	double * const dAC = dArr;
 	double * const dA = &dAC[0];
@@ -156,7 +159,7 @@ int main() {
 	_mm_free(dArr);
 
 	printf("Press any key to continue . . .");
-	getchar();
+	(void)getchar();
 	return 0;
 }
 
