@@ -1,7 +1,7 @@
 // don't forget to use compilation key for Linux: -lm
 /**********************************************************************************************************
 * N.Kozak // Lviv'2018 // ACM // Algorithm Flow Graph(by solving a quadratic equation example using SSE2) *
-*    file: acmlab3.c                                                                                      *
+*    file: acmlab3.cpp                                                                                    *
 ***********************************************************************************************************/
 //-fno-tree-vectorize
 //gcc -O3 -no-tree-vectorize 
@@ -158,7 +158,7 @@ int main() {
 
 	_mm_free(dArr);
 
-	printf("Press any key to continue . . .");
+	printf("Press Enter to continue . . .");
 	(void)getchar();
 	return 0;
 }
