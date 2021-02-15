@@ -11,8 +11,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include <x86intrin.h> // Linux
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
 #include <intrin.h> // Windows
+#elif defined(__linux__) || defined(__unix__) || defined(__APPLE__)
+#include <x86intrin.h> // Linux
+#else
+#   error "Unknown compiler"
+#endif
 #include <math.h> 
 #include <time.h>
 
