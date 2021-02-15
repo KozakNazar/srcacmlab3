@@ -16,6 +16,8 @@
 #include <math.h> 
 #include <time.h>
 
+#define NANOSECONDS_PER_SECOND_NUMBER 1000000000
+
 #define A  0.33333333
 #define B  0.
 #define C -3.
@@ -146,7 +148,7 @@ int main() {
 	endTime = getCurrentTime();
 	printResult((char*)"x86", 
 	dArr, 
-	(unsigned int)((endTime - startTime) * (1000000000 / REPEAT_COUNT)));
+	(unsigned int)((endTime - startTime) * (NANOSECONDS_PER_SECOND_NUMBER / REPEAT_COUNT)));
 
 	// SSE2
 	startTime = getCurrentTime();
@@ -154,7 +156,7 @@ int main() {
 	endTime = getCurrentTime();
 	printResult((char*)"SSE2",
 	dArr, 
-	(unsigned int)((endTime - startTime) * (1000000000 / REPEAT_COUNT)));
+	(unsigned int)((endTime - startTime) * (NANOSECONDS_PER_SECOND_NUMBER / REPEAT_COUNT)));
 
 	_mm_free(dArr);
 
