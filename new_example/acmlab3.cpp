@@ -89,7 +89,6 @@ void run_SSE2(DATA_TYPE_PTR const dArr) {
 	__m128d d__AC_BD__;
 	__m128d d__ACE_BDF__;
 	__m128d d__ACEG_BDFH__;
-
 	__m128d d__ACEGBDFH__;
 
 	// (etap 1)			
