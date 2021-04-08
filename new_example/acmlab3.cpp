@@ -72,7 +72,7 @@ double getCurrentTime() {
 #pragma GCC target ("no-sse2")
 //__attribute__((__target__("no-sse2")))
 void run_native(DATA_TYPE_PTR const dArr) {
-	*dX *= *dA;
+	*dX = *dA;
 	*dX *= *dB;
 	*dX *= *dC;
 	*dX *= *dD;
